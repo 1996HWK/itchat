@@ -11,7 +11,11 @@ for friend in friendList:
             itchat.send(friend["NickName"]+MESSAGE,friend["UserName"])
             SendPassNames.append(friend["NickName"])
     except Exception as E:
-        itchat.send("发生给"+"\""+friend["NickName"]+"\""+"发生:"+E, 'filehelper')
+        if len(friend["RemarkName"])==0:
+            itchat.send("发生给"+"\""+friend["RemarkName"]+"\""+"发生:"+E, 'filehelper')
+        else:
+             itchat.send("发生给"+"\""+friend["NickName"]+"\""+"发生:"+E, 'filehelper')
+        
     time.sleep(1)
 print("--------------发送祝福信息结果---------")
 file=open("names.txt","w",encoding="utf-8")
@@ -24,6 +28,7 @@ else:
     print("*发送成功！")
 print("*发送人数:",len(SendPassNames))
 print("*详情人，请查看文件")
-
+#NickName：昵称、RemarkName：备注
+#修改规则
 
 
