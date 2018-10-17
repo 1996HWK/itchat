@@ -7,7 +7,7 @@ itchat.auto_login(True)
 friendList=itchat.get_friends(update=True)[1:]
 for friend in friendList:
     try:
-        if friend["NickName"]!="陌生人":
+        if friend["NickName"]!="陌生人" and "同事" not in friend["NickName"]:
             itchat.send(friend["NickName"]+MESSAGE,friend["UserName"])
             SendPassNames.append(friend["NickName"])
     except Exception as E:
