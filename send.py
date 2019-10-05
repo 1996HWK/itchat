@@ -43,6 +43,7 @@ def inspect():
     for friend in friendList:
         if friend["RemarkName"]=="":
             print(friend["NickName"])
+# 执行
 inspect()
 
 
