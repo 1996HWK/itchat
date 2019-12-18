@@ -1,6 +1,7 @@
 import itchat
 import time
-MESSAGE=u",新年快乐~嘻嘻!"
+MESSAGE=u""",许久不见，emmm.
+            新年快乐~嘻嘻!"""
 SendPass=True
 SendPassNames=[]
 itchat.auto_login(True)
